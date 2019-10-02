@@ -1,12 +1,12 @@
-package com.reversepermission.reverse_permission_manager;
+package me.tousifosman.appveto_manager;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 
-import com.reversepermission.reverse_permission_manager.metadata.RpGroupMetadata;
-import com.reversepermission.reverse_permission_manager.metadata.RpMetadata;
+import me.tousifosman.appveto_manager.metadata_manager.RpGroupMetadata;
+import me.tousifosman.appveto_manager.metadata_manager.RpMetadata;
 
 import java.lang.ref.WeakReference;
 import java.util.LinkedList;
@@ -76,8 +76,8 @@ public class RpManager {
             } else if (applicationInfo.metaData != null){
                 Set<String> keySet = applicationInfo.metaData.keySet();
                 if (keySet != null) {
-                    for (RpGroupMetadata groupMetadata: RpGroupMetadata.values()) {
-                        if (keySet.contains(groupMetadata.getGroupMetaKey())) {
+                    for (RpGroupMetadata rpGroupMetadata : RpGroupMetadata.values()) {
+                        if (keySet.contains(rpGroupMetadata.getGroupMetaKey())) {
                             return true;
                         }
                     }

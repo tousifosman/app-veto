@@ -1,15 +1,13 @@
-package com.reversepermission.rp_xposed_framework.xposed_hooks;
+package me.tousifosman.appveto.xposed_hooks;
 
 import android.media.MediaRecorder;
 import android.util.Log;
 
-import com.reversepermission.reverse_permission_manager.RpProcessMonitorClient;
+import me.tousifosman.appveto_manager.RpProcessMonitorClient;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.HashMap;
 

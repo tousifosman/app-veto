@@ -1,4 +1,4 @@
-package com.reversepermission.reverse_permission_manager;
+package me.tousifosman.appveto_manager;
 
 import android.util.Log;
 

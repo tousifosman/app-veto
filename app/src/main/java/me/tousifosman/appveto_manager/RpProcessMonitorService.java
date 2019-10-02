@@ -1,4 +1,4 @@
-package com.reversepermission.reverse_permission_manager;
+package me.tousifosman.appveto_manager;
 
 import android.app.Service;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 import android.util.SparseArray;
 
-import com.reversepermission.reverse_permission_manager.metadata.RpMetadata;
+import me.tousifosman.appveto_manager.metadata_manager.RpMetadata;
 
 import org.jetbrains.annotations.Nullable;
 

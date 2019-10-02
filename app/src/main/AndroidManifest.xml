@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.reversepermission.rp_xposed_framework">
+    package="com.tousifosman.appveto">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -24,17 +24,17 @@
             android:name="xposedminversion"
             android:value="53" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name="me.tousifosman.appveto.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <service android:name="com.reversepermission.reverse_permission_manager.RpProcessMonitorService"
+        <service android:name="me.tousifosman.appveto_manager.RpProcessMonitorService"
             android:enabled="true">
             <intent-filter >
-                <action android:name="com.reversepermission.reverse_permission_manager.PROCESS_SERVICE" />
+                <action android:name="me.tousifosman.appveto_manager.PROCESS_SERVICE" />
             </intent-filter>
         </service>
 

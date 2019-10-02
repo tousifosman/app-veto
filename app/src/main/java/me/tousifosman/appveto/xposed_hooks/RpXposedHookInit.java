@@ -1,4 +1,4 @@
-package com.reversepermission.rp_xposed_framework.xposed_hooks;
+package me.tousifosman.appveto.xposed_hooks;
 
 import android.app.Activity;
 import android.app.AndroidAppHelper;
@@ -6,7 +6,7 @@ import android.content.Context;
 import android.hardware.Sensor;
 import android.util.Log;
 
-import com.reversepermission.reverse_permission_manager.RpProcessMonitorClient;
+import me.tousifosman.appveto_manager.RpProcessMonitorClient;
 
 import java.lang.reflect.Field;
 

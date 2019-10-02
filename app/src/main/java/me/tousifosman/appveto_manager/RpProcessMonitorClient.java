@@ -1,4 +1,4 @@
-package com.reversepermission.reverse_permission_manager;
+package me.tousifosman.appveto_manager;
 
 import android.app.AndroidAppHelper;
 import android.content.ComponentName;
@@ -12,9 +12,9 @@ import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.reversepermission.rp_xposed_framework.xposed_hooks.RpAudioRecordHook;
-import com.reversepermission.rp_xposed_framework.xposed_hooks.RpCameraHook;
-import com.reversepermission.rp_xposed_framework.xposed_hooks.RpMediaRecorderHook;
+import me.tousifosman.appveto.xposed_hooks.RpAudioRecordHook;
+import me.tousifosman.appveto.xposed_hooks.RpCameraHook;
+import me.tousifosman.appveto.xposed_hooks.RpMediaRecorderHook;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.Nullable;
@@ -103,8 +103,8 @@ public class RpProcessMonitorClient {
                 }
             };
 
-            Intent intent = new Intent("com.reversepermission.reverse_permission_manager.PROCESS_SERVICE");
-            intent.setPackage("com.reversepermission.rp_xposed_framework");
+            Intent intent = new Intent("me.tousifosman.appveto_manager.PROCESS_SERVICE");
+            intent.setPackage("me.tousifosman.appveto");
             context.bindService(intent, connection, Context.BIND_AUTO_CREATE);
         } else {
             connCallback.onConnReady(serviceInf);

@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.reversepermission.rp_xposed_framework"
+        applicationId "me.tousifosman.appveto"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
