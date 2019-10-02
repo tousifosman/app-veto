@@ -12,9 +12,9 @@ import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import me.tousifosman.appveto.xposed_hooks.RpAudioRecordHook;
-import me.tousifosman.appveto.xposed_hooks.RpCameraHook;
-import me.tousifosman.appveto.xposed_hooks.RpMediaRecorderHook;
+import me.tousifosman.appveto.xposedhooks.RpAudioRecordHook;
+import me.tousifosman.appveto.xposedhooks.RpCameraHook;
+import me.tousifosman.appveto.xposedhooks.RpMediaRecorderHook;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.Nullable;
