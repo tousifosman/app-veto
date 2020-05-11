@@ -1,0 +1,7 @@
+Executable : C:\Users\Tousif\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+E:\Workspace\reverse_permission\RP_XPosed_Framework\app\outputs\lib\cmake\debug\arm64-v8a
+rpxhook
+jvmArgs : 
+

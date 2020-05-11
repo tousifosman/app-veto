@@ -1,0 +1,26 @@
+[
+  {
+    "level": "INFO",
+    "message": "Start JSON generation. Platform version: 16 min SDK version: arm64-v8a",
+    "file": "E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "No CMake version was specified in build.gradle. Using default version 3.10.2.",
+    "file": "E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON \u0027E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\.cxx\\cmake\\debug\\arm64-v8a\\android_gradle_build.json\u0027 was up-to-date",
+    "file": "E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed without problems",
+    "file": "E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|arm64-v8a"
+  }
+]

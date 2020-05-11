@@ -1,0 +1,14 @@
+Executable : C:\Users\Tousif\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe
+arguments : 
+-HE:\Workspace\reverse_permission\RP_XPosed_Framework\app\src\main\cpp
+-BE:\Workspace\reverse_permission\RP_XPosed_Framework\app\.cxx\cmake\debug\x86_64
+-DANDROID_ABI=x86_64
+-DANDROID_PLATFORM=android-16
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=E:\Workspace\reverse_permission\RP_XPosed_Framework\app\build\intermediates\cmake\debug\obj\x86_64
+-DCMAKE_BUILD_TYPE=Debug
+-DANDROID_NDK=C:\Users\Tousif\AppData\Local\Android\Sdk\ndk-bundle
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\Tousif\AppData\Local\Android\Sdk\ndk-bundle\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=C:\Users\Tousif\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\ninja.exe
+-GAndroid Gradle - Ninja
+jvmArgs : 
+

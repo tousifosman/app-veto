@@ -19,7 +19,7 @@ public class RpProcessUtils {
      */
     private RpProcessUtils() {}
 
-    @Nullable
+    /*@Nullable
     public static CurrentFocusedApp getCurrentFocusedApp() {
         try {
 
@@ -73,7 +73,7 @@ public class RpProcessUtils {
             Log.e(TAG, "getCurrentFocusedApp: Error executing system command", e);
         }
         return null;
-    }
+    }*/
 
     public static class CurrentFocusedApp {
         private String focusAppName;

@@ -1,0 +1,18 @@
+# ninja log v5
+16	227	608959866	CMakeFiles/rpxhook.dir/xh_jni.c.o	95e118e816099c3b
+10	340	608959866	CMakeFiles/rpxhook.dir/rp_nativehook_camera.c.o	b0c49c8822a331f2
+227	347	608959866	CMakeFiles/rpxhook.dir/xhook.c.o	18d476b492e98c86
+18	408	608959866	CMakeFiles/rpxhook.dir/rp_nativehook_dlopen.c.o	d1ab2262ae850985
+8	569	608959866	CMakeFiles/rpxhook.dir/rp_nativehook_audio.c.o	f743a7045ddc1840
+12	575	608959866	CMakeFiles/rpxhook.dir/rp_xhook_jni.c.o	276de98687ede7bc
+6	579	608959866	CMakeFiles/rpxhook.dir/rp_nativehook_sensors.c.o	18578e8ce9e35275
+570	703	608959866	CMakeFiles/rpxhook.dir/xh_log.c.o	3d9383736a5a0b77
+575	709	608959866	CMakeFiles/rpxhook.dir/xh_version.c.o	da5654a455a9c1b9
+340	793	608959866	CMakeFiles/rpxhook.dir/xh_core.c.o	20a8538a3dfe911c
+408	847	608959866	CMakeFiles/rpxhook.dir/xh_util.c.o	65cb8acc35f3fffd
+347	901	608959866	CMakeFiles/rpxhook.dir/xh_elf.c.o	be1b365f20b2ac61
+0	1040	608959866	CMakeFiles/rpxhook.dir/native-lib.cpp.o	c0879595bb1b7f77
+14	1080	608959866	CMakeFiles/rpxhook.dir/rp_camera_hook_manager.cpp.o	380ef441dd5e74b3
+3	1442	608959866	CMakeFiles/rpxhook.dir/rp_backtrace.cpp.o	cf279926a9442d90
+5	1729	608959866	CMakeFiles/rpxhook.dir/rp_pointer_manager.cpp.o	adba33119f56fb2a
+1729	1928	608959868	E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/assets/lib/armeabi-v7a/librpxhook.so	d687e0f334af93c4

@@ -6,31 +6,40 @@
     android:layout_height="match_parent"
     tools:context="me.tousifosman.appveto.MainActivity">
 
-    <ToggleButton
-        android:id="@+id/btn_toggle_service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Toggle Service"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start Service"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_toggle_service"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_toggle_service"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/btn_toggle_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Toggle Service"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_test"
-        android:layout_width="match_parent"
+        android:id="@+id/btn_install"
+        android:layout_width="0sp"
         android:layout_height="wrap_content"
-        android:text="Test"
-        android:visibility="gone"
+        android:text="Install Libraries"
+        app:layout_constraintBottom_toTopOf="@id/btn_uninstall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_uninstall"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:text="Uninstall Libraries"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

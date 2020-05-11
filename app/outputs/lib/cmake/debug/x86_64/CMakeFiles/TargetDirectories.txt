@@ -1,0 +1,3 @@
+E:/Workspace/reverse_permission/RP_XPosed_Framework/app/outputs/lib/cmake/debug/x86_64/CMakeFiles/rpxhook.dir
+E:/Workspace/reverse_permission/RP_XPosed_Framework/app/outputs/lib/cmake/debug/x86_64/CMakeFiles/edit_cache.dir
+E:/Workspace/reverse_permission/RP_XPosed_Framework/app/outputs/lib/cmake/debug/x86_64/CMakeFiles/rebuild_cache.dir

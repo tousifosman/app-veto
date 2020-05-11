@@ -1,0 +1,17 @@
+[1/12] Building C object CMakeFiles/rpxhook.dir/xhook.c.o
+[2/12] Building CXX object CMakeFiles/rpxhook.dir/native-lib.cpp.o
+[3/12] Building C object CMakeFiles/rpxhook.dir/rp_nativehook_audio.c.o
+[4/12] Building C object CMakeFiles/rpxhook.dir/rp_nativehook_sensors.c.o
+[5/12] Building C object CMakeFiles/rpxhook.dir/rp_xhook_jni.c.o
+[6/12] Building C object CMakeFiles/rpxhook.dir/xh_core.c.o
+[7/12] Building C object CMakeFiles/rpxhook.dir/xh_util.c.o
+[8/12] Building C object CMakeFiles/rpxhook.dir/xh_jni.c.o
+[9/12] Building C object CMakeFiles/rpxhook.dir/xh_log.c.o
+[10/12] Building C object CMakeFiles/rpxhook.dir/xh_version.c.o
+[11/12] Building C object CMakeFiles/rpxhook.dir/xh_elf.c.o
+E:\Workspace\reverse_permission\RP_XPosed_Framework\app\src\main\cpp\rp_nativehook_audio.c:33:60: warning: incompatible pointer types passing 'SLObjectItf' (aka 'const struct SLObjectItf_ *const *') to parameter of type 'SLObjectItf *' (aka 'const struct SLObjectItf_ *const **'); take the address with & [-Wincompatible-pointer-types]
+    SLresult sLresult = (*old_opensles_slCreateEngine_ptr)(pEngineTemp, numOptions, pEngineOptions, numInterfaces, pInterfaceIds, pInterfaceRequired);
+                                                           ^~~~~~~~~~~
+                                                           &
+1 warning generated.
+[12/12] Linking CXX shared library E:\Workspace\reverse_permission\RP_XPosed_Framework\app\build\intermediates\cmake\debug\obj\armeabi-v7a\librpxhook.so

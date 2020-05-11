@@ -65,7 +65,26 @@ public class RpCameraHook {
                 return camera;
             }
         });*/
+
         XposedHelpers.findAndHookMethod(Camera.class, "open", int.class, new XC_MethodHook() {
+            @Override
+            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                super.beforeHookedMethod(param);
+                if (!RpProcessMonitorClient.getInstance().isAllowedCameraAccessCached()) {
+                    Log.d(TAG, "beforeHookedMethod: Camera#open(int) method not allowed");
+                    param.setThrowable(new Exception("Camera is not Allowed to be Access by current Focus App"));
+                }
+            }
+
+            @Override
+            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                super.afterHookedMethod(param);
+                getInstance().legacyCameras.add((Camera) param.getResult());
+                Log.d(TAG, "afterHookedMethod: " + Arrays.toString(getInstance().legacyCameras.toArray()));
+            }
+        });
+
+        XposedHelpers.findAndHookMethod(Camera.class, "open", new XC_MethodHook() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                 super.beforeHookedMethod(param);

@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
+
     defaultConfig {
         applicationId "me.tousifosman.appveto"
         minSdkVersion 15
@@ -9,6 +10,21 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "arm64-v8a", "armeabi-v7a"//, "x86", "x86_64"
+        }
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11 -fPIC"
+//                arguments "-DANDROID_NATIVE_API_LEVEL=21", "-DANDROID_STL=c++_shared", "-DANDROID=true"
+                //cppFlags "-std=c++14 -stdlib=libc++ -frtti -fexceptions"
+//                cppFlags "-fexceptions", "-frtti"
+                //arguments "-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=clang"
+//                arguments "--unresolved-symbols=ignore-all"
+            }
+        }
+
     }
     buildTypes {
         release {
@@ -19,7 +35,19 @@ android {
     externalNativeBuild {
         cmake {
             path "src/main/cpp/CMakeLists.txt"
-            version "3.10.2"
+            //buildStagingDirectory "./outputs/cmake"
+            //arguments "-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=clang"
+            //
+            //buildStagingDirectory "src/main/lib"
+            //arguments "-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=clang"
+            //version "3.10.2"
+        }
+    }
+    sourceSets {
+        main {
+            // let gradle pack the shared library into apk
+            //jniLibs.srcDirs = ['src/main/cpp/lib']
+            //assets.srcDirs = ['src/main/assets/']
         }
     }
 }

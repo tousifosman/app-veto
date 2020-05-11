@@ -30,8 +30,7 @@ extern "C" {
 
 #define XHOOK_EXPORT __attribute__((visibility("default")))
 
-int xhook_register(const char *pathname_regex_str, const char *symbol,
-                   void *new_func, void **old_func) XHOOK_EXPORT;
+int xhook_register(const char *pathname_regex_str, const char *symbol, void *new_func, void **old_func) XHOOK_EXPORT;
 
 int xhook_ignore(const char *pathname_regex_str, const char *symbol) XHOOK_EXPORT;
 

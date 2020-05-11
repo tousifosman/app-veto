@@ -1,0 +1,13 @@
+# ninja log v5
+12	142	0	CMakeFiles/rpxhook.dir/xhook.c.o	e350f724df3658cc
+39	182	0	CMakeFiles/rpxhook.dir/xh_version.c.o	86adb71439a962bb
+49	185	0	CMakeFiles/rpxhook.dir/xh_log.c.o	7abce280e0c463eb
+7	279	0	CMakeFiles/rpxhook.dir/rp_xhook_jni.c.o	3acbeb29471329fa
+143	280	0	CMakeFiles/rpxhook.dir/xh_jni.c.o	de570735b39bb196
+17	281	0	CMakeFiles/rpxhook.dir/rp_nativehook_audio.c.o	554e7f305db3a523
+23	283	0	CMakeFiles/rpxhook.dir/rp_nativehook_sensors.c.o	be87f645b43535d0
+34	291	0	CMakeFiles/rpxhook.dir/xh_util.c.o	71e410635c81610a
+28	312	0	CMakeFiles/rpxhook.dir/xh_core.c.o	d630dd52cb6d91f
+59	319	0	CMakeFiles/rpxhook.dir/xh_elf.c.o	57427a06537fbeb5
+1	496	0	CMakeFiles/rpxhook.dir/native-lib.cpp.o	a4d1d7e37b388bb2
+496	678	0	E:/Workspace/reverse_permission/RP_XPosed_Framework/app/build/intermediates/cmake/debug/obj/arm64-v8a/librpxhook.so	df72d3bbdb3b95be

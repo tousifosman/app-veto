@@ -1,0 +1,21 @@
+{
+  "buildFiles": [
+    "E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\.cxx\\cmake\\release\\arm64-v8a --target clean"
+  ],
+  "libraries": {
+    "rpxhook-Release-arm64-v8a": {
+      "artifactName": "rpxhook",
+      "buildCommand": "C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\.cxx\\cmake\\release\\arm64-v8a --target rpxhook",
+      "abi": "arm64-v8a",
+      "output": "E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\assets\\lib\\arm64-v8a\\librpxhook.so"
+    },
+    "dl-lib-Release-arm64-v8a": {
+      "artifactName": "dl-lib",
+      "abi": "arm64-v8a",
+      "output": "E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\arm64-v8a\\libdl.so"
+    }
+  }
+}

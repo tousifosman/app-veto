@@ -1,0 +1,21 @@
+{
+  "buildFiles": [
+    "E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\.cxx\\cmake\\release\\x86_64 --target clean"
+  ],
+  "libraries": {
+    "rpxhook-Release-x86_64": {
+      "artifactName": "rpxhook",
+      "buildCommand": "C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\.cxx\\cmake\\release\\x86_64 --target rpxhook",
+      "abi": "x86_64",
+      "output": "\\src\\main\\lib\\assets\\x86_64\\librpxhook.so"
+    },
+    "dl-lib-Release-x86_64": {
+      "artifactName": "dl-lib",
+      "abi": "x86_64",
+      "output": "lib\\x86_64\\libdl.so"
+    }
+  }
+}

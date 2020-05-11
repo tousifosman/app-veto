@@ -9,6 +9,8 @@ import me.tousifosman.appveto_manager.metadata_manager.RpGroupMetadata;
 import me.tousifosman.appveto_manager.metadata_manager.RpMetadata;
 
 import java.lang.ref.WeakReference;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -87,6 +89,51 @@ public class RpManager {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public RpMetadata.MetadataModel getAllVetoMetaKeysOfPackage(String packageName) throws PackageManager.NameNotFoundException {
+        ApplicationInfo applicationInfo = contextWeakReference.get().getPackageManager().getApplicationInfo(packageName, PackageManager.GET_META_DATA);
+
+        Set<String> allKeys = RpMetadata.getAllMetaKeys();
+        Set<String> allGroupKeys = RpGroupMetadata.getAllGroupMetaKeys();
+
+        Set<RpMetadata> packageKeys = new HashSet<>();
+        Set<RpGroupMetadata> packageGroupKeys = new HashSet<>();
+
+        for (String key: applicationInfo.metaData.keySet()) {
+            if (allKeys.contains(key)) {
+                packageKeys.add(RpMetadata.keyToMetadata(key));
+            } else if (allGroupKeys.contains(key)) {
+                packageGroupKeys.add(RpGroupMetadata.keyToGroupMetadata(key));
+            }
+        }
+
+        return new RpMetadata.MetadataModel(packageKeys.toArray(new RpMetadata[0]), packageGroupKeys.toArray(new RpGroupMetadata[0]));
+    }
+
+    public int[] getAllSensorVetoMetaKeysOfPackage(String packageName) throws PackageManager.NameNotFoundException {
+
+        Set<Integer> sensorSet = new HashSet<>();
+        int maxSensorValue = 0;
+
+        RpMetadata.MetadataModel metadataModel = getAllVetoMetaKeysOfPackage(packageName);
+
+        for (RpMetadata metadata: metadataModel.metadata) {
+            if (metadata.getType() != null) {
+                sensorSet.add(metadata.getType());
+                if (metadata.getType() > maxSensorValue) {
+                    maxSensorValue = metadata.getType();
+                }
+            }
+        }
+
+        int[] sensorAccessMap = new int[maxSensorValue + 1];
+
+        for (Integer sensorValue: sensorSet.toArray(new Integer[0])) {
+            sensorAccessMap[sensorValue] = 1;
+        }
+
+        return sensorAccessMap;
     }
 
 }

@@ -11,5 +11,6 @@ interface RpPsServiceCallbackInf {
 
     int getProcessId();
     String getClientPackageName();
-    void onFocusAppChanged();
+    void setSensorVetoMap(inout int[] sensorVetoMap);
+    void onFocusAppChanged(String packageName);
 }

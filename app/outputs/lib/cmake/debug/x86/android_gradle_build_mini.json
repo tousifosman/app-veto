@@ -1,0 +1,19 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
+    "C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\build\\cmake\\platforms.cmake",
+    "E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\outputs\\lib\\cmake\\debug\\x86\" clean"
+  ],
+  "buildTargetsCommand": "C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\outputs\\lib\\cmake\\debug\\x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "rpxhook-Debug-x86": {
+      "artifactName": "rpxhook",
+      "buildCommand": "C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\outputs\\lib\\cmake\\debug\\x86\" rpxhook",
+      "abi": "x86",
+      "output": "E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\build\\intermediates\\cmake\\debug\\obj\\x86\\librpxhook.so"
+    }
+  }
+}

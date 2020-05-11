@@ -5,6 +5,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
 import android.os.IBinder;
 import android.os.Process;
 import android.os.RemoteException;
@@ -15,9 +16,16 @@ import android.util.Log;
 import me.tousifosman.appveto.xposedhooks.RpAudioRecordHook;
 import me.tousifosman.appveto.xposedhooks.RpCameraHook;
 import me.tousifosman.appveto.xposedhooks.RpMediaRecorderHook;
+import me.tousifosman.appveto.xposedhooks.nativehooks.RpNativeHookInit;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Set;
 
 public class RpProcessMonitorClient {
 
@@ -28,6 +36,7 @@ public class RpProcessMonitorClient {
 
     private boolean allowedCameraAccess = true;
     private boolean allowedMicAccess = true;
+    //private Set<Integer> sensorAccessMap;
 
     @NonNull
     private RpPsServiceCallbackInf serviceCallbackInf = new RpPsServiceCallbackInf.Stub() {
@@ -43,12 +52,37 @@ public class RpProcessMonitorClient {
         }
 
         @Override
-        public void onFocusAppChanged() throws RemoteException {
+        public void onFocusAppChanged(String packageName) throws RemoteException {
             Log.d(TAG, "onFocusAppChanged: Focus App Changed Callback");
             Context context = AndroidAppHelper.currentApplication();
             updateAllowedCameraAccess(context);
+
+            if (packageName != null && !packageName.equalsIgnoreCase("null")) {
+                if (serviceInf != null) {
+                    int[] sensorAccessMap = serviceInf.getSensorMap();
+                    if (sensorAccessMap.length <= 0) {
+                        try {
+                            sensorAccessMap = RpManager.bindWith(context).getAllSensorVetoMetaKeysOfPackage(packageName);
+                            serviceInf.setSensorMap(packageName, sensorAccessMap);
+                        } catch (PackageManager.NameNotFoundException e) {
+                            Log.e(TAG, "onFocusAppChanged:\nPackage Name -> " + packageName, e);
+                        }
+                    }
+                    RpNativeHookInit.bindWith(context).updateSensorAccess(sensorAccessMap);
+                } else {
+                    Log.e(TAG, "onFocusAppChanged: Focus changed before initializing Service Interface", new IllegalStateException());
+                }
+            } else {
+                RpNativeHookInit.bindWith(context).updateSensorAccess(new int[]{0});
+            }
+
             updateAllowedMicAccess(context);
             RpMediaRecorderHook.getInstance().notifyMediaAccessUpdate();
+        }
+
+        @Override
+        public void setSensorVetoMap(int[] sensorVetoMap) throws RemoteException {
+
         }
     };
 
@@ -222,12 +256,13 @@ public class RpProcessMonitorClient {
         });
     }
 
-    public void updateAllowedMicAccess(Context context) {
+    public void updateAllowedMicAccess(final Context context) {
         isAllowedMicAccess(context, new RpClientBinaryCallback() {
             @Override
             public void onResult(boolean result) {
                 allowedMicAccess = result;
                 RpAudioRecordHook.getInstance().notifyMicAccessUpdated();
+                RpNativeHookInit.bindWith(context).updateMicAccess(result);
                 Log.d(TAG, "onResult: Updated Mic Access Notified -> " + result);
             }
         });

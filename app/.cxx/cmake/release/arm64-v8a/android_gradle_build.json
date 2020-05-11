@@ -1,0 +1,140 @@
+
+{
+	"buildFiles" : 
+	[
+		"E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/CMakeLists.txt"
+	],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\.cxx\\cmake\\release\\arm64-v8a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"dl-lib-Release-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "dl-lib",
+			"buildType" : "release",
+			"output" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/lib/arm64-v8a/libdl.so",
+			"toolchain" : "2797273737"
+		},
+		"rpxhook-Release-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "rpxhook",
+			"buildCommand" : "C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\.cxx\\cmake\\release\\arm64-v8a --target rpxhook",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -fPIC -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -fPIC -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/rp_backtrace.cpp",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -fPIC -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/rp_pointer_manager.cpp",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/rp_nativehook_sensors.c",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/rp_nativehook_audio.c",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/rp_nativehook_camera.c",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -fPIC -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/rp_camera_hook_manager.cpp",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/rp_nativehook_dlopen.c",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/rp_xhook_jni.c",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/xhook.c",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/xh_core.c",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/xh_elf.c",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/xh_jni.c",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/xh_log.c",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/xh_util.c",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				},
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drpxhook_EXPORTS -IE:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\lib\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/cpp/xh_version.c",
+					"workingDirectory" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/.cxx/cmake/release/arm64-v8a"
+				}
+			],
+			"output" : "E:/Workspace/reverse_permission/RP_XPosed_Framework/app/src/main/assets/lib/arm64-v8a/librpxhook.so",
+			"toolchain" : "2797273737"
+		}
+	},
+	"toolchains" : 
+	{
+		"2797273737" : 
+		{
+			"cCompilerExecutable" : "C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/Tousif/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}

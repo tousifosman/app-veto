@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\outputs\\cmake\\cmake\\debug\\armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "rpxhook-Debug-armeabi-v7a": {
+      "artifactName": "rpxhook",
+      "buildCommand": "C:\\Users\\Tousif\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\outputs\\cmake\\cmake\\debug\\armeabi-v7a --target rpxhook",
+      "abi": "armeabi-v7a",
+      "output": "E:\\Workspace\\reverse_permission\\RP_XPosed_Framework\\app\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a\\librpxhook.so"
+    }
+  }
+}

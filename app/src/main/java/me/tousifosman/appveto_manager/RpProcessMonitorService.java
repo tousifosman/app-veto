@@ -13,6 +13,14 @@ import me.tousifosman.appveto_manager.metadata_manager.RpMetadata;
 
 import org.jetbrains.annotations.Nullable;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Set;
+
 public class RpProcessMonitorService extends Service {
 
     private final String TAG = RpProcessMonitorService.class.getName();
@@ -22,8 +30,11 @@ public class RpProcessMonitorService extends Service {
 
     private boolean flagServiceActive = false;
 
+
     @NonNull
     private final SparseArray<RpPsServiceCallbackInf> callbackInfMap = new SparseArray<>();
+
+    private final HashMap<String, int[]> packageSensorMap = new HashMap<>();
 
     @Nullable
     private RpProcessUtils.CurrentFocusedApp mCurrentFocusedApp = null;
@@ -42,12 +53,42 @@ public class RpProcessMonitorService extends Service {
         }
 
         @Override
+        public int[] getSensorMap() throws RemoteException {
+            if (!flagServiceActive) {
+                Log.d(TAG, "getSensorMap: Service inactive");
+                return new int[] {0};
+            }
+
+            int[] sensorMap = packageSensorMap.get(mCurrentFocusedApp.getFocusAppName());
+            if (sensorMap != null && sensorMap.length > 0) {
+                // No sensor has type 0. Index 0 of the map represents the service status.
+                sensorMap[0] = 1;
+
+                Log.d(TAG, "getSensorMap: " + Arrays.toString(sensorMap));
+
+                return sensorMap;
+            } else {
+                Log.d(TAG, "getSensorMap: Empty value returned");
+                return new int[0];
+            }
+        }
+
+        @Override
+        public void setSensorMap(String packageName, int[] sensorMap) throws RemoteException {
+            packageSensorMap.put(packageName, sensorMap);
+        }
+
+        @Override
         public void setCurFocusApp(String appName, String activityName) throws RemoteException {
             mCurrentFocusedApp = new RpProcessUtils.CurrentFocusedApp(appName, activityName);
+
+            Log.d(TAG, "setCurFocusApp: ");
+            
             for (int i = 0; i < callbackInfMap.size(); i++) {
                 int key = callbackInfMap.keyAt(i);
                 try {
-                    callbackInfMap.get(key).onFocusAppChanged();
+                    RpPsServiceCallbackInf callbackInf = callbackInfMap.get(key);
+                    callbackInf.onFocusAppChanged(appName);
                 } catch (Exception e) {
                     Log.d(TAG, "setCurFocusApp: Client binder disconnected");
                     callbackInfMap.remove(key);
@@ -81,7 +122,7 @@ public class RpProcessMonitorService extends Service {
                                     mCurrentFocusedApp.getFocusAppName(), metaData);
 
                     mCurrentFocusedApp.cachedTypeAccessMap.put(sensorType, allowAccess);
-                    Log.d(TAG, "isAllowSensor: " + allowAccess.booleanValue());
+                    Log.d(TAG, "isAllowSensor: " + allowAccess);
                 }
                 return allowAccess;
             }
@@ -96,15 +137,16 @@ public class RpProcessMonitorService extends Service {
                     mCurrentFocusedApp.cachedCameraAccess = !RpManager.bindWith(RpProcessMonitorService.this)
                             .isReversePermissionInPackage(mCurrentFocusedApp.getFocusAppName(), RpMetadata.RP_SENSOR_CAMERA);
                 }
+                Log.d(TAG, "isAllowCamera: " + mCurrentFocusedApp.cachedCameraAccess);
                 return mCurrentFocusedApp.cachedCameraAccess;
             }
+            Log.d(TAG, "isAllowCamera: " + true + "(Default)");
             return true;
         }
 
 
         @Override
         public boolean isAllowedMic() throws RemoteException {
-
 
             if (flagServiceActive && RpProcessUtils.CurrentFocusedApp.isValid(mCurrentFocusedApp)) {
                 if (mCurrentFocusedApp.cachedMicAccess == null) {

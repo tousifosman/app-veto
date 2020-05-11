@@ -1,0 +1,12 @@
+ninja: Entering directory `E:\Workspace\reverse_permission\RP_XPosed_Framework\app\outputs\lib\cmake\debug\x86'
+[1/11] Building C object CMakeFiles/rpxhook.dir/rp_nativehook_sensors.c.o
+[2/11] Building C object CMakeFiles/rpxhook.dir/xh_version.c.o
+[3/11] Building C object CMakeFiles/rpxhook.dir/xh_log.c.o
+[4/11] Building C object CMakeFiles/rpxhook.dir/xhook.c.o
+[5/11] Building C object CMakeFiles/rpxhook.dir/xh_jni.c.o
+[6/11] Building C object CMakeFiles/rpxhook.dir/rp_xhook_jni.c.o
+[7/11] Building C object CMakeFiles/rpxhook.dir/xh_util.c.o
+[8/11] Building C object CMakeFiles/rpxhook.dir/xh_elf.c.o
+[9/11] Building C object CMakeFiles/rpxhook.dir/xh_core.c.o
+[10/11] Building CXX object CMakeFiles/rpxhook.dir/native-lib.cpp.o
+[11/11] Linking CXX shared library E:\Workspace\reverse_permission\RP_XPosed_Framework\app\build\intermediates\cmake\debug\obj\x86\librpxhook.so

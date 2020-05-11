@@ -13,9 +13,9 @@ public class RpAppRuntimeMem {
         return instance;
     }
 
-    public void updateCurrentFocusApp() {
+    /*public void updateCurrentFocusApp() {
         currentFocusedApp = RpProcessUtils.getCurrentFocusedApp();
-    }
+    }*/
 
     public RpProcessUtils.CurrentFocusedApp getCurrentFocusedApp() {
         return currentFocusedApp;

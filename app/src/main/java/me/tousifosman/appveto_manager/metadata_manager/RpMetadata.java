@@ -26,6 +26,7 @@ public enum RpMetadata {
     RP_SENSOR_LIGHT("appveto_sensor_light", Sensor.TYPE_LIGHT),
     RP_SENSOR_PROXIMITY("appveto_sensor_proximity", Sensor.TYPE_PROXIMITY),
     RP_SENSOR_GRAVITY("appveto_sensor_gravity", Sensor.TYPE_GRAVITY),
+    RP_SENSOR_STEP_COUNTER("appveto_sensor_step_counter", Sensor.TYPE_STEP_COUNTER),
 
     // Simply add any sensor key (Sensor#Type_*) and string tag and it will work!!
 
@@ -41,11 +42,15 @@ public enum RpMetadata {
     private static Set<String> metaKeySet;
 
     @Nullable
+    private static HashMap<String, RpMetadata> map;
+
+    @Nullable
     private static HashMap<Integer, RpMetadata> typeMap;
 
     RpMetadata(String metaKey) {
         this.metaKey  = metaKey;
     }
+
 
     RpMetadata(String metaKey, int type) {
         this.metaKey  = metaKey;
@@ -58,7 +63,7 @@ public enum RpMetadata {
     }
 
     @Contract(pure = true)
-    public int getType() {
+    public Integer getType() {
         return this.type;
     }
 
@@ -101,13 +106,39 @@ public enum RpMetadata {
     }
 
     @NonNull
-    private static Set<String> getAllMetaKeys() {
+    public static Set<String> getAllMetaKeys() {
         if (metaKeySet == null) {
             metaKeySet = new HashSet<>();
-            for (RpMetadata metaData: RpMetadata.values())
+            for (RpMetadata metaData: RpMetadata.values()) {
                 metaKeySet.add(metaData.metaKey);
+            }
         }
         return metaKeySet;
     }
 
+    public static RpMetadata keyToMetadata(String key) {
+        if (map == null) {
+            map = new HashMap<>();
+            for (RpMetadata metadata: RpMetadata.values()) {
+                map.put(metadata.metaKey, metadata);
+            }
+        }
+        return map.get(key);
+    }
+
+    public static class MetadataModel {
+        public RpMetadata[] metadata;
+        public RpGroupMetadata[] groupMetadata;
+
+        public MetadataModel(RpMetadata[] metadata, RpGroupMetadata[] groupMetadata) {
+            this.metadata = metadata;
+            this.groupMetadata = groupMetadata;
+        }
+
+        /*public static MetadataModel createEmptyModel() {
+            MetadataModel metadataModel  = new MetadataModel();
+            meta
+            return metadataModel;
+        }*/
+    }
 }

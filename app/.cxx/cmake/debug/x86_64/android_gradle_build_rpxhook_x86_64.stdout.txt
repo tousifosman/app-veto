@@ -1,0 +1,14 @@
+[1/14] Building C object CMakeFiles/rpxhook.dir/rp_nativehook_dlopen.c.o
+[2/14] Building CXX object CMakeFiles/rpxhook.dir/native-lib.cpp.o
+[3/14] Building C object CMakeFiles/rpxhook.dir/rp_xhook_jni.c.o
+[4/14] Building C object CMakeFiles/rpxhook.dir/rp_nativehook_audio.c.o
+[5/14] Building CXX object CMakeFiles/rpxhook.dir/rp_pointer_manager.cpp.o
+[6/14] Building C object CMakeFiles/rpxhook.dir/rp_nativehook_sensors.c.o
+[7/14] Building C object CMakeFiles/rpxhook.dir/xh_jni.c.o
+[8/14] Building C object CMakeFiles/rpxhook.dir/xh_core.c.o
+[9/14] Building C object CMakeFiles/rpxhook.dir/xh_version.c.o
+[10/14] Building C object CMakeFiles/rpxhook.dir/xh_log.c.o
+[11/14] Building C object CMakeFiles/rpxhook.dir/xhook.c.o
+[12/14] Building C object CMakeFiles/rpxhook.dir/xh_elf.c.o
+[13/14] Building C object CMakeFiles/rpxhook.dir/xh_util.c.o
+[14/14] Linking CXX shared library \src\main\lib\assets\x86_64\librpxhook.so
